@@ -2,12 +2,12 @@
 
 # Soklick
 
-##The site was written using:
+## The site was written using:
 * Django framework
 * HTML5
 * CSS3
 
-##Admin account data
+## Admin account data
 ```
 Login: Admin
 Password: admin777
