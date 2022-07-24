@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <link rel="icon" href="{% static 'img/3916986.png' %}" type="image/png">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% if not user.is_authenticated %}
+                <ul>
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'about' %}">О нас</a></li>
+                    <li><a href="{% url 'authorization' %}">Войти</a></li>
+                    <li><a href="{% url 'registration' %}">Зарегистрироваться</a></li>
+                </ul>
+            {% else %}
+                <ul>
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'about' %}">О нас</a></li>
+                    <li><a href="{% url 'profile' %}">Профиль</a></li>
+                    <li><a href="{% url 'links' %}">Ссылки</a></li>
+                </ul>
+            {% endif %}
+        </header>
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer>
+            <div class="footer-text">
+                <h3>Soklick</h3>
+                <h4>© Все права защищены</h4>
+                <p>Сервис по сокращению ссылок</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+    <div class="profile">
+        <h1>Профиль</h1>
+        <div class="data">
+            <img width="64" height="64" src="{% static 'img/3423461.png' %}" alt="изображения профиля">
+            <p>
+                <b>User:</b> @{{ user.username }}
+                <br>
+                <b>Email:</b> {{ user.email }}
+            </p>
+        </div>
+        <div class="update">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Обновить</button> Хотите <a href="{% url 'exit' %}" style="color: red; text-decoration: none;">выйти</a>?
+            </form>
+        </div>
+    </div>
+{% endblock %}

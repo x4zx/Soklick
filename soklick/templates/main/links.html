@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+    {% if not user.is_authenticated %}
+        <div class="linksnoauth">
+            <img src="{% static 'img/2557124.jpg' %}" alt="Энот">
+            <h1>Погоди ка... Что ты здесь делаешь?</h1>
+        </div>
+    {% else %}
+        <div class="linksauth">
+            <h1>Сокращение</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Сократить</button>
+            </form>
+            <h1>Доступные ссылки:</h1>
+            {% csrf_token %}
+            {% for link in links %}
+                <P>Ссылка -> <a href="{{ link.before_url }}" target="_blank" style="color: red; text-decoration: none;">https://soklick/links/{{ link.after_url }}</a></P>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}

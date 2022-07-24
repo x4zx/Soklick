@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+    <div class="about">
+        <img src="{% static 'img/8150527.jpg' %}" alt="Энот">
+        <h1>Чем мы занимаемся?</h1>
+        <p>
+            Мы предоставляем услуги по сокращению ссылок, в нашей системе всё очень просто. 
+            <br>
+            Для начала работы вам необходимо <a href="{% url 'authorization' %}" style="color: red; text-decoration: none;">войти</a> в аккаунт, при его отсутствии <a href="{% url 'registration' %}" style="color: red; text-decoration: none;">создать</a>.
+            <br>
+            Далее вам будет доступен раздел с созданием сокращенных ссылок. 
+            <br>
+            Все ваши ссылки будут сохранаться в разделе {% if not user.is_authenticated %} 
+                                                            ссылок.
+                                                        {% else %} 
+                                                            <a href="{% url 'links' %}" style="color: red; text-decoration: none;">ссылок</a>. 
+                                                        {% endif %}
+        </p>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+    <div class="center">
+        <img src="{% static 'img/7195205.jpg' %}" alt="Энот">
+        <h1>Soklick</h1>
+        <p>Быстро сократим любую вашу ссылку!</p>
+        <div class="buttons">
+            {% if not user.is_authenticated %}
+                <a href="{% url 'authorization' %}"><button type="button">Войти</button></a>
+                <a href="{% url 'registration' %}"><button type="button">Зарегистрироваться</button></a>
+            {% else %}
+                <a href="{% url 'links' %}"><button type="button">Сократить</button></a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

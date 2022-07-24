@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    Выход 
+{% endblock %}
+
+{% block main %}
+    <div class="exit">
+        <img src="{% static 'img/8235935.jpg' %}" alt="Энот">
+        <h1>Вы успешно вышли из аккаунта!</h1>
+        <h3><a href="{% url 'authorization' %}" style="color: red; text-decoration: none;">Войти обратно</a></h3>
+    </div>
+{% endblock %}

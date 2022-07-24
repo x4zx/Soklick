@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;800&family=Montserrat:wght@300;500;600;800&family=Roboto+Slab:wght@300;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    background-color: #fff;
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+header ul li {
+    display: inline;
+}
+
+header ul a {
+    font-size: 20px;
+    padding: 20px;
+    line-height: 1px;
+    color: #808080;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header ul a:hover {
+	color: red;
+    transition-duration: 1s;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.center h1 {
+    margin-top: 30px;
+}
+
+.center .buttons button {
+    margin-top: 25px;
+    margin-left: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    background: red;
+    color: #fff;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.center .buttons button:hover {
+    transform: scale(1.12);
+}
+
+footer {
+    height: 100px;
+    background-color: #D3D3D3;
+}
+
+.footer-text {
+    text-align: center;
+    justify-content: center;
+    color: #808080;
+    padding: 18px 0;
+}
+
+.about {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.about h1 {
+    margin-top: 30px;
+}
+
+.registration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.registration form {
+    width: 650px;
+    height: 400px;
+    font-weight: 500;
+    border: 1px solid silver;
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.registration .helptext {
+    font-size: 15px;
+    color: #808080;
+}
+
+.registration form label {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    margin-top: 15px;
+}
+
+.registration form input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.registration form button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    background: red;
+    color: #fff;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.registration form button:hover {
+    transform: scale(1.12);
+}
+
+.registration form p {
+    margin-top: 10px;
+}
+
+.authorization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.authorization form {
+    width: 650px;
+    height: 230px;
+    font-weight: 500;
+    border: 1px solid silver;
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.authorization .helptext {
+    font-size: 15px;
+    color: #808080;
+}
+
+.authorization form label {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    margin-top: 15px;
+}
+
+.authorization form input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.authorization form button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    background: red;
+    color: #fff;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.authorization form button:hover {
+    transform: scale(1.12);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    font-weight: 500;
+}
+
+.profile .data {
+    display: flex;
+    margin-left: -380px;
+}
+
+.profile .data p {
+    margin-top: 15px;
+}
+
+.profile form {
+    width: 650px;
+    height: 250px;
+    font-weight: 500;
+    border: 1px solid silver;
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.profile .helptext {
+    font-size: 15px;
+    color: #808080;
+}
+
+.profile form label {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    margin-top: 15px;
+}
+
+.profile form input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.profile form button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    background: red;
+    color: #fff;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.profile form button:hover {
+    transform: scale(1.10);
+}
+
+.exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.exit h1 {
+    margin-top: 30px;
+}
+
+.linksnoauth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.linksnoauth h1 {
+    margin-top: 30px;
+}
+
+.linksauth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.linksauth h1 {
+    margin-top: 30px;
+}
+
+.linksauth form {
+    width: 650px;
+    height: 240px;
+    font-weight: 500;
+    border: 1px solid silver;
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.linksauth form label {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    margin-top: 15px;
+}
+
+.linksauth form input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.linksauth form button {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    background: red;
+    color: #fff;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.linksauth form button:hover {
+    transform: scale(1.10);
+}
