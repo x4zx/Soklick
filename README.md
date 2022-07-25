@@ -3,7 +3,7 @@
 # Soklick
 
 ## The site was written using:
-* Django framework
+* Django
 * HTML5
 * CSS3
 
